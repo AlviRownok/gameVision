@@ -119,10 +119,10 @@ def make_collage_3_side_by_side(
 
 if __name__ == "__main__":
     make_collage_3_side_by_side(
-        video1_path="C:\\Users\\Gam\\Downloads\\gamevision\\videos\\game02\\game02_ai.mp4",
-        video2_path="C:\\Users\\Gam\\Downloads\\gamevision\\videos\\game02\\game02_ai_heatvision.mp4",
-        video3_path="C:\\Users\\Gam\\Downloads\\gamevision\\videos\\game02\\game02_ai_line.mp4",
-        output_path="C:\\Users\\Gam\\Downloads\\gamevision\\gamvision.mp4",
+        video1_path="videos/game02/game02_ai.mp4", # Change each of these paths to your local locations of choice
+        video2_path="videos/game02/game02_ai_heatvision.mp4",
+        video3_path="videos/game02/game02_ai_line.mp4",
+        output_path="gamevision.mp4",
         target_height=None,   # or set e.g. 720
         pad_px=12,            # set 0 for no separator
         pad_color_bgr=(0, 0, 0),
