@@ -1,0 +1,7 @@
+# Add this to your .gitignore
+venv/
+.venv/
+env/
+vision/
+game03/
+game04/
