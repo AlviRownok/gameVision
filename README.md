@@ -1,5 +1,7 @@
 # 🏀 gameVision: AI-Powered Basketball Analytics
 
+![gameVision Preview](Preview.png)
+
 **gameVision** is a high-performance computer vision project designed to automate basketball game analysis. By leveraging state-of-the-art object detection and custom tracking logic, this tool provides real-time scoring detection, player tracking, and professional-grade visual overlays.
 
 ---
@@ -20,16 +22,15 @@
 * **Computer Vision Logic**: [Supervision](https://github.com/roboflow/supervision)
 * **Image Processing**: OpenCV, NumPy
 * **Tracking**: Kalman Filtering
-* **Large File Management**: Git LFS (for high-resolution video assets)
+* **Large File Management**: Git LFS (for `.mp4` video assets and `.pt` model weights)
 
 ---
 
 ## 📦 Installation & Setup
 
 ### 1. Clone the Repository
-
 ```bash
-git clone https://github.com/AlviRownok/gameVision.git
+git clone [https://github.com/AlviRownok/gameVision.git](https://github.com/AlviRownok/gameVision.git)
 cd gameVision
 
 ```
@@ -44,17 +45,17 @@ python -m venv venv
 venv\Scripts\activate
 
 # Install dependencies
-pip install -U ultralytics supervision lapx opencv-python numpy tqdm
+pip install -U ultralytics supervision lapx opencv-python numpy tqdm ipywidgets
 
 ```
 
-### 3. Initialize Git LFS (For Videos)
+### 3. Initialize Git LFS
 
-Since this project handles large `.mp4` files, ensure Git LFS is installed to track high-quality game footage.
+Since this project handles large assets, Git LFS is required to pull the video samples and model weights.
 
 ```bash
 git lfs install
-git lfs track "*.mp4"
+git lfs pull
 
 ```
 
@@ -65,8 +66,9 @@ git lfs track "*.mp4"
 The main logic is contained within `GameVision1_0.ipynb`.
 
 1. Place your input video in the designated input directory.
-2. Open the notebook and update the `INPUT_VIDEO_PATH` and `OUTPUT_VIDEO_PATH`.
-3. Run the cells to perform the analysis. The script will:
+2. Open the notebook in VS Code or Jupyter.
+3. Update the `INPUT_VIDEO_PATH` and `OUTPUT_VIDEO_PATH` variables.
+4. Run all cells to:
 * Initialize the **Auto Hoop Gates** based on rim detection.
 * Process the video frame-by-frame with the **Kalman Stabilizer**.
 * Export a processed video with score counting and visual traces.
@@ -94,3 +96,5 @@ The main logic is contained within `GameVision1_0.ipynb`.
 ---
 
 *Developed as part of the "Projects For Fun" Computer Vision series.*
+
+---
